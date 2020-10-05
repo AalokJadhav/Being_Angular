@@ -1,0 +1,8 @@
+<p>
+  login works!
+</p>
+<input type="text" placeholder="username" #u1><br><br>
+<input type="password" placeholder="passwoard" #p2><br><br>
+<button (click)="check(u1.value, p2.value)" class="btn btn-success">Login</button>
+<br>
+<span>{{msg}}</span>

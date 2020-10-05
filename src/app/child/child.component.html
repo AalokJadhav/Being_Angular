@@ -1,0 +1,19 @@
+<p>
+{{parentdata}}</p>
+<br>
+
+<!-- <h3 style = "color: rgb(154, 20, 207)">For @Output property :</h3> -->
+<br>
+<button (click)="SendDataToPar()" class="btn btn-success">Click Me</button>
+<br><br>
+
+<h3 style = "color: rgb(154, 20, 207)">For ng-content & ng-container</h3>
+
+<div class="card">
+    <div class="card-header"><b>Header</b>
+        <ng-content select=".headingPart"></ng-content>
+    </div>
+    <div class="card-body"><b>Body</b>
+        <ng-content select=".bodyPart"></ng-content>
+    </div>
+</div>

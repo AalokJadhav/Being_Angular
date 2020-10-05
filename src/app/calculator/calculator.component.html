@@ -1,0 +1,22 @@
+<div class="container">
+<div class="card">
+  <div class="card-header">Calculator</div>
+<div class="card-body">
+  <div class="form-group d-flex flex-row">
+<input [(ngModel)]='num1' type="number" name="num1" class="form-control" placeholder="number1">
+&nbsp;&nbsp;
+<input [(ngModel)]='num2'  type="number" name="num2" class="form-control" placeholder="number2">
+  </div>
+  <div class="d-flex flex-row justify-content-between">
+    <button class="btn btn-success" (click)="addition()">Addition</button>
+    <button class="btn btn-primary" (click)="substract()">Substraction</button>
+    <button class="btn btn-danger" (click)="multi()">Multiplication</button>
+    <button class="btn btn-warning" (click)="division()">Division</button>
+
+  </div>
+</div>
+<div class="card-footer">
+<h4>The Ans Of {{num1}} and {{num2}} is = {{result}}</h4>
+</div>
+</div>
+</div>
