@@ -15,6 +15,8 @@ export class CalculatorComponent implements OnInit {
   }
   addition() {
     this.result = this.num1 + this.num2;
+    console.log(this.result);
+    
   }
   substract() {
     this.result = this.num1 - this.num2;
