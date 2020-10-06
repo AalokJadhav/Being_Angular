@@ -25,4 +25,53 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# Being_Angular
+
+## Project functionality
+
+#### Interpolation
+
+#### Binding
+
+* Event Binding
+* Class Binding
+* Style Binding
+* Two-Way Data Binding
+
+#### Template Reference Variable
+
+#### Angular Pipe
+
+#### Custom Pipe example
+
+#### Directives
+
+* Component Directives
+* Structural Directives
+    * [ngClass] 
+
+* Attribute Directives
+    * [ngIf] 
+    * [ngFor] 
+    * [ngSwitch] 
+    
+#### @Input and @Output
+ 
+#### ng-content & ng-container
+ 
+#### Template Driven Form
+ 
+#### Reactive/Model Driven Form : using formControl
+
+#### Reactive/Model Driven Form : using formGroup
+
+#### Reactive/Model Driven Form : using formBuilder
+
+#### Angular Service
+
+#### Fetch Data From Server Using Http
+
+#### Error Handling
+
+#### Angular Routing and navigation : with canActiveGuard
+
+#### Simple Calculator Using Angular
