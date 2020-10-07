@@ -32,22 +32,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Project functionality
 
-#### Interpolation
+#### 1. Interpolation
 
-#### Binding
+#### 2. Binding
 
 * Event Binding
 * Class Binding
 * Style Binding
 * Two-Way Data Binding
 
-#### Template Reference Variable
+#### 3. Template Reference Variable
 
-#### Angular Pipe
+#### 4. Angular Pipe
 
-#### Custom Pipe example
+#### 5. Custom Pipe
 
-#### Directives
+#### 6. Directives
 
 * Component Directives
 * Structural Directives
@@ -58,24 +58,24 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * [ngFor] 
     * [ngSwitch] 
     
-#### @Input and @Output
+#### 7. @Input and @Output
  
-#### ng-content & ng-container
+#### 8. ng-content & ng-container
  
-#### Template Driven Form
+#### 9. Template Driven Form
  
-#### Reactive/Model Driven Form : using formControl
+#### 10. Reactive/Model Driven Form : using formControl
 
-#### Reactive/Model Driven Form : using formGroup
+#### 11. Reactive/Model Driven Form : using formGroup
 
-#### Reactive/Model Driven Form : using formBuilder
+#### 12. Reactive/Model Driven Form : using formBuilder
 
-#### Angular Service
+#### 13. Angular Service
 
-#### Fetch Data From Server Using Http
+#### 14. Fetch Data From Server Using Http
 
-#### Error Handling
+#### 15. Error Handling
 
-#### Angular Routing and navigation : with canActiveGuard
+#### 16. Angular Routing and navigation : with canActiveGuard
 
-#### Simple Calculator Using Angular
+#### 17. Simple Calculator Using Angular
