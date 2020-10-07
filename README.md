@@ -1,6 +1,10 @@
 #  [Angular](https://angular.io/docs) Project
+
 ***
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+
+**Please support this project by simply putting a Github star ⭐. 🙏 Thanks**
+
 
 ## Development server
 
