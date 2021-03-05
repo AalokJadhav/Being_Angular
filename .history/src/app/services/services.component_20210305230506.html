@@ -1,0 +1,28 @@
+
+
+<p>{{datas}}</p>
+
+<ul *ngFor="let data of showBiodata">
+
+  <li>{{data.name}}</li>
+  <li>{{data.profile}}</li>
+  <li>{{data.salary}}</li>
+
+</ul>
+<br><br>
+
+<h3 style = "color: rgb(154, 20, 207)">Fetch Data From Server Using Http : </h3> <h2>we get UserID, ID, Title and Body</h2>
+
+
+<ul *ngFor="let data1 of showjsondata">
+
+  <li>{{data1.userId}}</li>
+  <li>{{data1.id}}</li>
+  <li>{{data1.title}}</li>
+  <li>{{data1.body}}</li>
+
+</ul>
+<br><br>
+
+<h3 style = "color: rgb(154, 20, 207)">Angular Error Handling :</h3>
+<h4> {{errorMsg}} </h4>

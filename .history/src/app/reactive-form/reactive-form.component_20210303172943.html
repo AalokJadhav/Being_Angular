@@ -1,0 +1,93 @@
+<h3 style="color: rgb(154, 20, 207)">For Reactive/Model Driven Form : using formControl</h3>
+<br>
+<div class="container">
+    <label> Name:
+       <input type="text" [formControl]="name">
+    </label>&nbsp;&nbsp;&nbsp;
+    <br><br>
+    <p>You Entered:
+      {{name.value}}
+    </p>
+</div>
+<br><br>
+
+<h3 style="color: rgb(154, 20, 207)">For Reactive/Model Driven Form : using formGroup</h3>
+<br>
+
+<form [formGroup]="CustomerForm" (ngSubmit)="onSubmit()">
+  <p>
+    <label>First Name</label>
+    <input type="text" formControlName="firstName" required>
+  </p>
+  <p>
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName">
+  </p>
+  <div formGroupName="address">
+    <h4>Address</h4>
+    <p>
+      <label>Street</label>
+      <input type="text" formControlName="street">
+    </p>
+    <p>
+      <label>City</label>
+      <input type="text" formControlName="city">
+    </p>
+    <p>
+      <label>State</label>
+      <input type="text" formControlName="state">
+    </p>
+    <p>
+      <label>ZipCode</label>
+      <input type="text" formControlName="zipcode">
+    </p>
+    <p>
+      <button type="submit" class="btn btn-success" [disabled]="!CustomerForm.valid">Submit</button>
+    </p>
+  </div>
+</form>
+
+<p style="color: red"><b>To Display Form Value In json:</b>
+  {{customerForm.value | json}}
+</p>
+
+<br><br>
+
+<h3 style="color: rgb(154, 20, 207)">For Reactive/Model Driven Form : using formBuilder</h3>
+<br>
+<form [formGroup]="customerForm1" (ngSubmit)="onSubmit()">
+  <p>
+    <label>First Name</label>
+    <input type="text" formControlName="firstName" required>
+  </p>
+  <p>
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName">
+  </p>
+  <div formGroupName="address">
+    <h4>Address</h4>
+    <p>
+      <label>Street</label>
+      <input type="text" formControlName="street">
+    </p>
+    <p>
+      <label>City</label>
+      <input type="text" formControlName="city">
+    </p>
+    <p>
+      <label>State</label>
+      <input type="text" formControlName="state">
+    </p>
+    <p>
+      <label>ZipCode</label>
+      <input type="text" formControlName="zipcode">
+    </p>
+    <p>
+      <button type="submit" class="btn btn-success" [disabled]="!customerForm1.valid">Submit</button>
+    </p>
+  </div>
+</form>
+
+<p style="color: red"><b>To Display Form Value In json:</b>
+  {{customerForm1.value | json}}
+</p>

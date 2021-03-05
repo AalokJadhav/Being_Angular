@@ -1,0 +1,37 @@
+<h3 style = "color: rgb(154, 20, 207)">For Template Driven Form :</h3>
+<br>
+<div class="container">
+  <form onSubmit="submit(userdetails.value)" #userdetails>
+    <div class="form-group">
+      <label for="firstname"><b>FirstName</b></label>
+      <input required minlength="5" max-length="10" pattern="AalokJadhav" ngModel name="firstname" type="text"
+        id="firstname" class="form-control" #fname="ngModel" (click)="showValue(fname)" placeholder="firstname">
+
+      <div class="alert alert-danger" *ngIf="!fname.valid && fname.touched">*Please Fill Firstname </div>
+      <!-- <div class="alert alert-danger" *ngIf="fname.errors?.required">*Please Fill Firstname</div> -->
+      <div class="alert alert-danger" *ngIf="fname.errors?.pattern">Pattern Required
+      <div *ngIf="fname.errors.minlength">Minlength Required</div>
+      <div *ngIf="fname.errors.max-length">Max-length Required</div>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password"><b>Password</b></label>
+      <input required minlength="5" max-length="10" pattern="123@123" ngModel name="password" type="text" id="password"
+        class="form-control" #pass="ngModel" placeholder="password">
+      <div class="alert alert-danger" *ngIf="!pass.valid && pass.touched ">*Please Enter Password </div>
+      <!-- <div class="alert alert-danger" *ngIf="pass.errors?.required">*Please Enter Password</div> -->
+      <div class="alert alert-danger" *ngIf="pass.errors?.pattern">Pattern Required
+      <div *ngIf="pass.errors.minlength">Minlength Required</div>
+      <div *ngIf="pass.errors.max-length">Max-length Required</div>
+    </div>
+      <div>
+        <br>
+        <input type="Submit" class="btn btn-success">
+        <p>{{successmsg}}</p>
+      </div>
+    </div>
+
+  </form>
+
+</div>

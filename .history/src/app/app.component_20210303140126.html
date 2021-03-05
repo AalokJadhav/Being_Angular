@@ -1,0 +1,168 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+    <h2 style = "color: rgb(154, 20, 207)"> Interpolation : </h2>
+
+  <h1>
+    Welcome to {{  projectName }} 😊
+  </h1>
+  <br>
+
+  <h2 style = "color: rgb(154, 20, 207)"> Event Binding : </h2><br>
+
+  <button class="btn btn-danger" (click)="onclick($event)">Event Binding</button><br><br>
+  <input type="text" [value]="getfullname()">
+  <br><br>
+  <input type="text" [value]="text">
+  <br><br>
+
+
+
+  <h2 style = "color: rgb(154, 20, 207)"> Class Binding : </h2><br>
+  <button class="btn btn-success" [class.active]="isAcitve">Class Binding</button>&nbsp;&nbsp;
+  <button class="btn btn-success" [class.disabled]="isdisable">Class Binding</button>
+  <br><br>
+  <button class="btn btn-danger" [class]="ButtonClassChange">CSS Class Binding</button>
+  <br><br>
+
+
+
+  <h2 style = "color: rgb(154, 20, 207)"> Style Binding : </h2><br>
+    <button class="btn btn-danger" [style.color]="inlineColor? 'black' : 'blue'">Style binding</button>&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-danger btn-lg" [style.fontWeight]="inlineFont? 'bold' : 'normal'">Style binding with font</button>
+  <br><br>
+
+
+
+  <h2 style = "color: rgb(154, 20, 207)"> Template Reference Variable : </h2><br>
+  <input type="text" class="form-control" placeholder="Type Anything And Click Then See On Console" #data (click)="getdata(data.value)">
+  <br>
+  <button class="btn btn-success" (click)="getdata(data.value)"> Click Me</button>
+  <br><br>
+
+
+
+  <h2 style = "color: rgb(154, 20, 207)"> 2 Way Data Binding : </h2><br>
+  <div float="right">
+    <input type="text" class="form-control" placeholder="two way data binding" [(ngModel)]="yourtext">
+    <br>
+    <p>Value Of Input Box : {{yourtext}}</p>
+
+
+
+    <h2 style = "color: rgb(154, 20, 207)"> Angular Pipe :</h2><br>
+    <h4>uppercase------> <b>FirstName:</b> {{biodata.firstName | uppercase}}</h4>
+    <h4>lowercase------> <b>lastName:</b> {{biodata.lastName | lowercase}}</h4>
+    <h4>date------------> <b>DOB:</b> {{biodata.DOB | date}}</h4>
+    <h4>number--------> <b>MTech Percentage:</b> {{biodata.Percentage | number:'2.2-2'}}</h4>
+    <h4>currency-------> <b>Salary:</b> {{biodata.Salary | currency}}</h4>
+    <br><br>
+    <h3 style = "color: rgb(154, 20, 207)">Custom Pipe example : Slice Method</h3><br>
+    <h4>{{Sentance | customslice}}</h4>
+    <br><br>
+
+
+
+
+    <h2 style = "color: rgb(154, 20, 207)"> [ngClass] :</h2><br>
+    <div [ngClass]=" 'color bgcolor font'">
+       [ngClass] Directive
+    </div>
+    <br><br>
+
+
+
+    <h2 style = "color: rgb(154, 20, 207)"> [ngStyle] :</h2><br>
+    <div [ngStyle]="{'color':'maroon' ,'background-color': 'gray'}"> [ngStyle] Directive
+    </div>
+    <br><br>
+  </div>
+
+
+
+  <h3 style = "color: rgb(154, 20, 207)">For *ngIf Case :</h3>
+  <div *ngIf="fullName === 'Aalok Jadhavxxx'; then mainpart else elsepart"></div>
+  <ng-template #mainpart> *ngIf Directive with mainpart<br>By {{fullName}}</ng-template>
+  <ng-template #elsepart> *ngIf Directive with elsepart<br>By {{fullName}}</ng-template>
+  <br><br>
+
+
+
+  <h3 style = "color: rgb(154, 20, 207)">For *ngFor Case :</h3>
+  <div *ngFor="let car of carsname; index as i">*ngFor----- {{car.id}} {{car.name}} {{i}}</div>
+  <br>
+
+
+
+  <h3 style = "color: rgb(154, 20, 207)">For [NgSwitch] Case :</h3>
+  <div [ngSwitch]="favcolor">
+    <div *ngSwitchCase=" 'red'">This is my fav color {{favcolor}}</div>
+    <div *ngSwitchCase=" 'green'">This is my fav color {{favcolor}}</div>
+    <div *ngSwitchDefault>This is the default one {{favcolor}}</div>
+  </div>
+  <br>
+
+
+
+  <h3 style = "color: rgb(154, 20, 207)">For @input property :</h3>
+  <app-child [parentdata]="friends"></app-child>
+  <br>
+
+
+
+  <h3 style = "color: rgb(154, 20, 207)">For @Output property :</h3>
+  <app-child (childData)="childMessage=$event"></app-child>
+  {{childMessage}}
+  
+
+
+  <app-child>
+
+    <div class="headingPart"> This is heading part... with ng-content</div>
+    <div class="bodyPart">This is body part... with ng-content</div>
+
+    <ng-container class="headingPart"> This is heading part... with ng-container</ng-container>
+    <ng-container class="bodyPart">This is body part... with ng-container</ng-container>
+  </app-child>
+  <br><br>
+  <app-tdf-form></app-tdf-form>
+  <br>
+  <app-reactive-form></app-reactive-form>
+  <br>
+
+
+
+  <h3 style = "color: rgb(154, 20, 207)">For Angular Service :</h3>
+
+  <app-services></app-services>
+  <br><br>
+
+
+
+  <h3 style = "color: rgb(154, 20, 207)">Angular Routing and navigation : with canActiveGuard </h3>
+  <br>
+</div>
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><b>Angular Routing</b></a>
+
+      <a href="#">Home</a>&nbsp;&nbsp;
+      <a routerLink="/about" routerLinkActive="active">About</a>&nbsp;&nbsp;
+      <a routerLink="/blog" routerLinkActive="active">Blog</a>&nbsp;&nbsp;
+      <a routerLink="/login" routerLinkActive="active">Login</a>&nbsp;&nbsp;
+      <a routerLink="/dashboard">Dashboard</a>&nbsp;&nbsp;
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+  <router-outlet></router-outlet>
+
+</div>
+<br><br>
+
+
+
+<h3 style = "color: rgb(154, 20, 207)">Simple Calculator Using Angular :  </h3>
+<app-calculator></app-calculator>

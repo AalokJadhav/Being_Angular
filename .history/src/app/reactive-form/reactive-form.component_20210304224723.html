@@ -1,0 +1,56 @@
+<h3 style="color: rgb(154, 20, 207)">For Reactive/Model Driven Form : using formControl</h3>
+<br>
+<div class="container">
+    <label> Name
+    </label>&nbsp;&nbsp;
+    <input type="text" [formControl]="name">
+    <br><br>
+    <p><b>You Entered :</b>
+      {{name.value}}
+    </p>
+</div>
+<br><br>
+
+<h3 style="color: rgb(154, 20, 207)">Reactive/Model Driven Form :</h3>
+<br>
+
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <label>First Name</label>
+    <input type="text" formControlName="firstName" required>
+    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+    </div>
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName">
+    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+    </div>
+  <div formGroupName="address">
+    <h4>Address</h4>
+      <label>Street</label>
+      <input type="text" formControlName="street">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      <label>City</label>
+      <input type="text" formControlName="city">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      <label>State</label>
+      <input type="text" formControlName="state">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      <label>ZipCode</label>
+      <input type="text" formControlName="zipcode">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      <button type="submit" class="btn btn-success" [disabled]="!customerForm.valid">Submit</button>
+
+  </div>
+</form>
+<p style="color: red"><b>To Display Form Value In json:</b>
+  {{customerForm.value | json}}
+</p>
